@@ -1,0 +1,2114 @@
+[
+    {
+        "id": "edb36dd8ac18bda8",
+        "type": "tab",
+        "label": "OPC UA Arduino Data",
+        "disabled": false,
+        "info": "Datos de sensores de Arduino Uno comunicados por puerto serial para servidor de prueba de OPC UA "
+    },
+    {
+        "id": "269813c2b8029cb5",
+        "type": "tab",
+        "label": "Prosys Server",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "b6f5fe4d2d7edfd0",
+        "type": "tab",
+        "label": "Arduino Lecturas",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "13b08bfeb632c52a",
+        "type": "tab",
+        "label": "OPCUA Server",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "7a64650c.9b1d54",
+        "type": "serial-port",
+        "serialport": "/dev/ttyACM0",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "b15ae0fd.c3766",
+        "type": "OpcUa-Endpoint",
+        "endpoint": "opc.tcp://192.168.1.80:53530/OPCUA/SimulationServer",
+        "secpol": "None",
+        "secmode": "None",
+        "login": true
+    },
+    {
+        "id": "9de0b797.2888f",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#094777",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#094777",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#094777",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0e71be",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#094777",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Dashboard Node-Red: OPC UA",
+            "hideToolbar": "false",
+            "allowSwipe": "menu",
+            "lockMenu": "true",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "6c9747ae.558e58",
+        "type": "ui_tab",
+        "name": "Simulacion Servidor OPC UA Prosys",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "65521fcd.5d99a",
+        "type": "ui_tab",
+        "name": "Prueba",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "535b72c3.b2d50c",
+        "type": "ui_group",
+        "name": "Lecturas",
+        "tab": "6c9747ae.558e58",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": true
+    },
+    {
+        "id": "e3715be7.8ca9b8",
+        "type": "ui_group",
+        "name": "Servidor OPC UA",
+        "tab": "65521fcd.5d99a",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a6463b49.678438",
+        "type": "OpcUa-Endpoint",
+        "endpoint": "opc.tcp://localhost:55380",
+        "secpol": "None",
+        "secmode": "None",
+        "login": false
+    },
+    {
+        "id": "5e74200e.55d4e",
+        "type": "ui_group",
+        "name": "Servidor OPC UA",
+        "tab": "6e9b9ef9.94e89",
+        "order": 9,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6e9b9ef9.94e89",
+        "type": "ui_tab",
+        "name": "Servidor Node-Red",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "7e10f4e5.f87c2c",
+        "type": "modbus-client",
+        "name": "Delta PLC",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "tcpHost": "192.168.0.154",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "2000",
+        "parallelUnitIdsAllowed": true
+    },
+    {
+        "id": "9255cd05.df42a",
+        "type": "arduino-board",
+        "device": "COM7"
+    },
+    {
+        "id": "f9e73317c999a441",
+        "type": "arduino-board",
+        "device": "/dev/ttyACM0"
+    },
+    {
+        "id": "ccf66c0c3e6123fa",
+        "type": "serial in",
+        "z": "edb36dd8ac18bda8",
+        "name": "Arduino",
+        "serial": "7a64650c.9b1d54",
+        "x": 90,
+        "y": 280,
+        "wires": [
+            [
+                "2d9055c89ab32332"
+            ]
+        ]
+    },
+    {
+        "id": "2d9055c89ab32332",
+        "type": "split",
+        "z": "edb36dd8ac18bda8",
+        "name": "Separador",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 250,
+        "y": 280,
+        "wires": [
+            [
+                "a174af491f87f7a6"
+            ]
+        ]
+    },
+    {
+        "id": "567252c7f880d4f4",
+        "type": "function",
+        "z": "edb36dd8ac18bda8",
+        "name": "Interpreta datos",
+        "func": "msg1 = {};\nmsg2 = {};\nmsg3 = {};\n\nif (msg.payload[3]){\n    var PB = msg.payload;\n    msg1.payload = PB;\n    msg1.topic = \"Pushbutton;\"\n}\n\nif (msg.payload[7]){\n    var Temperatura = msg.payload;\n    msg2.payload = Temperatura;\n    msg2.topic = \"Temperatura;\"\n}\n\nif (msg.payload[6]){\n    var Potenciometro= msg.payload;\n    msg3.payload = Potenciometro;\n    msg3.topic = \"Potenciometro;\"\n}\nreturn[msg1, msg2, msg3];",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 240,
+        "y": 380,
+        "wires": [
+            [
+                "01abb719ea3f935b",
+                "cfb5d5fb3d7e407e"
+            ],
+            [
+                "b3ff737d32eae22b"
+            ],
+            [
+                "a3b7edecc7e20580"
+            ]
+        ]
+    },
+    {
+        "id": "01abb719ea3f935b",
+        "type": "ui_text",
+        "z": "edb36dd8ac18bda8",
+        "d": true,
+        "group": "e3715be7.8ca9b8",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "name": "Pushbutton",
+        "label": "Pushbutton",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 420,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "b3ff737d32eae22b",
+        "type": "ui_gauge",
+        "z": "edb36dd8ac18bda8",
+        "d": true,
+        "name": "Temperatura",
+        "group": "e3715be7.8ca9b8",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "celcios",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 430,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "a3b7edecc7e20580",
+        "type": "ui_gauge",
+        "z": "edb36dd8ac18bda8",
+        "d": true,
+        "name": "Potenciometro",
+        "group": "e3715be7.8ca9b8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "compass",
+        "title": "Potenciometro",
+        "label": "Volts",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "5",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 430,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "cfb5d5fb3d7e407e",
+        "type": "debug",
+        "z": "edb36dd8ac18bda8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "a174af491f87f7a6",
+        "type": "debug",
+        "z": "edb36dd8ac18bda8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "fea920a6eb1a2379",
+        "type": "ui_chart",
+        "z": "269813c2b8029cb5",
+        "name": "",
+        "group": "535b72c3.b2d50c",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Dientes de Sierra",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 610,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2b045d6987899c07",
+        "type": "ui_chart",
+        "z": "269813c2b8029cb5",
+        "name": "",
+        "group": "535b72c3.b2d50c",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "Senoidal",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 580,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "41d21cb0478972e6",
+        "type": "function",
+        "z": "269813c2b8029cb5",
+        "name": "Interpreta datos",
+        "func": "msg1 = {};\nmsg2 = {};\nmsg3 = {};\nmsg4 = {};\nmsg5 = {};\nmsg6 = {};\nmsg7 = {};\nmsg8 = {};\n\nmsg1.topic=\"ns=3;i=1001;datatype=Double\";\nmsg2.topic=\"ns=3;i=1002;datatype=Double\";\nmsg3.topic=\"ns=3;i=1003;datatype=Double\";\nmsg4.topic=\"ns=3;i=1004;datatype=Double\";\nmsg5.topic=\"ns=3;i=1005;datatype=Double\";\nmsg6.topic=\"ns=3;i=1006;datatype=Double\";\nmsg7.topic=\"ns=3;i=1013;datatype=Double\";\nmsg8.topic=\"ns=3;i=1008;datatype=Boolean\";\n\nreturn [msg1, msg2, msg3, msg4, msg5, msg6, msg7, msg8];",
+        "outputs": 8,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 140,
+        "wires": [
+            [
+                "13dfd6c11ca84460"
+            ],
+            [
+                "13dfd6c11ca84460"
+            ],
+            [
+                "13dfd6c11ca84460"
+            ],
+            [
+                "13dfd6c11ca84460"
+            ],
+            [
+                "13dfd6c11ca84460"
+            ],
+            [
+                "13dfd6c11ca84460"
+            ],
+            [
+                "13dfd6c11ca84460"
+            ],
+            [
+                "13dfd6c11ca84460"
+            ]
+        ]
+    },
+    {
+        "id": "6826e883895b0856",
+        "type": "inject",
+        "z": "269813c2b8029cb5",
+        "name": "",
+        "props": [],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 90,
+        "y": 120,
+        "wires": [
+            [
+                "41d21cb0478972e6"
+            ]
+        ]
+    },
+    {
+        "id": "0c4f4a1c17ca0376",
+        "type": "function",
+        "z": "269813c2b8029cb5",
+        "name": "Separa",
+        "func": "msg1 = {};\nmsg2 = {};\nmsg3 = {};\nmsg4 = {};\nmsg5 = {};\nmsg6 = {};\nmsg7 = {};\nmsg8 = {};\n\n\nif(msg.topic==\"ns=3;i=1001\")\n{\n    msg1.payload=msg.payload;\n    msg1.topic=\"Contador;\"\n    //return [msg1, null, null, null, null, null, null, null];\n}\n\nif(msg.topic==\"ns=3;i=1002\")\n{\n    msg2.payload=msg.payload;\n    msg2.topic=\"Random;\"\n    //return [null, msg2, null, null, null, null, null, null];\n\n}\n\nif(msg.topic==\"ns=3;i=1003\")\n{\n    msg3.payload=msg.payload;\n    msg3.topic=\"Dientes de Sierra;\"\n    //return [null, null, msg3, null, null, null, null, null];\n}\n\nif(msg.topic==\"ns=3;i=1004\")\n{\n    msg4.payload=msg.payload;\n    msg4.topic=\"Senoidal;\"\n    //return [null, null, null, msg4, null, null, null, null];\n}\n\nif(msg.topic==\"ns=3;i=1005\")\n{\n    msg5.payload=msg.payload;\n    msg5.topic=\"Cuadrada;\"\n    //return [null, null, null, null, msg5, null, null, null];\n}\n\nif(msg.topic==\"ns=3;i=1006\")\n{\n    msg6.payload=msg.payload;\n    msg6.topic=\"Triangular;\"\n    //return [null, null, null, null, null, msg6, null, null];\n}\n\nif(msg.topic==\"ns=3;i=1013\")\n{\n    msg7.payload=msg.payload;\n    msg7.topic=\"Variable;\"\n    //return [null, null, null, null, null, null, msg7, null];\n}\n\nif(msg.topic==\"ns=3;i=1008\")\n{\n    msg8.payload=msg.payload;\n    msg8.topic=\"Pushbutton;\"\n    //return [null, null, null, null, null, null, null, msg8];\n}\n\nreturn [msg1, msg2, msg3, msg4, msg5, msg6, msg7, msg8];",
+        "outputs": 8,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 300,
+        "wires": [
+            [
+                "b9c679c4c21f8ba4"
+            ],
+            [
+                "7e8cb2f3162518b7"
+            ],
+            [
+                "fea920a6eb1a2379"
+            ],
+            [
+                "2b045d6987899c07"
+            ],
+            [
+                "0f0cb8d229c343cc"
+            ],
+            [
+                "607b76ce44d9cd2f"
+            ],
+            [
+                "ec97b8e08a9c0ad7"
+            ],
+            [
+                "82a75bd4b9ebee39"
+            ]
+        ]
+    },
+    {
+        "id": "b9c679c4c21f8ba4",
+        "type": "ui_chart",
+        "z": "269813c2b8029cb5",
+        "name": "",
+        "group": "535b72c3.b2d50c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Contador",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 580,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7e8cb2f3162518b7",
+        "type": "ui_chart",
+        "z": "269813c2b8029cb5",
+        "name": "",
+        "group": "535b72c3.b2d50c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Random",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 580,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0f0cb8d229c343cc",
+        "type": "ui_chart",
+        "z": "269813c2b8029cb5",
+        "name": "",
+        "group": "535b72c3.b2d50c",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "label": "Cuadrada",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 580,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "607b76ce44d9cd2f",
+        "type": "ui_chart",
+        "z": "269813c2b8029cb5",
+        "name": "",
+        "group": "535b72c3.b2d50c",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "label": "Triangular",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 580,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "30b2b01f6c6a31d0",
+        "type": "inject",
+        "z": "269813c2b8029cb5",
+        "name": "Variable",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "ns=3;i=1013;datatype=Double",
+        "payload": "23",
+        "payloadType": "num",
+        "x": 200,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ec97b8e08a9c0ad7",
+        "type": "ui_text",
+        "z": "269813c2b8029cb5",
+        "group": "535b72c3.b2d50c",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "name": "Escritura del cliente",
+        "label": "Variable",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 610,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "82a75bd4b9ebee39",
+        "type": "ui_text",
+        "z": "269813c2b8029cb5",
+        "group": "535b72c3.b2d50c",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "name": "Interruptor",
+        "label": "Estado",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 590,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "7fc7ab894c03cb70",
+        "type": "inject",
+        "z": "269813c2b8029cb5",
+        "name": "Pushbutton",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "ns=3;i=1008;datatype=Boolean",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 210,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9ed5a27fc456b0a3",
+        "type": "ui_switch",
+        "z": "269813c2b8029cb5",
+        "name": "Interruptor",
+        "label": "Switch",
+        "tooltip": "",
+        "group": "535b72c3.b2d50c",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "ns=3;i=1008;datatype=Boolean",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "x": 210,
+        "y": 600,
+        "wires": [
+            [
+                "e54c7e7c79e79ab1"
+            ]
+        ]
+    },
+    {
+        "id": "b970a0d9691e52cb",
+        "type": "ui_numeric",
+        "z": "269813c2b8029cb5",
+        "name": "Variables",
+        "label": "Escritura del cliente",
+        "tooltip": "",
+        "group": "535b72c3.b2d50c",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "ns=3;i=1013;datatype=Double",
+        "topicType": "str",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "500",
+        "step": 1,
+        "x": 230,
+        "y": 440,
+        "wires": [
+            [
+                "e54c7e7c79e79ab1"
+            ]
+        ]
+    },
+    {
+        "id": "13dfd6c11ca84460",
+        "type": "OpcUa-Client",
+        "z": "269813c2b8029cb5",
+        "endpoint": "b15ae0fd.c3766",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "l",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "Lectura de cliente",
+        "x": 210,
+        "y": 300,
+        "wires": [
+            [
+                "0c4f4a1c17ca0376"
+            ]
+        ]
+    },
+    {
+        "id": "e54c7e7c79e79ab1",
+        "type": "OpcUa-Client",
+        "z": "269813c2b8029cb5",
+        "endpoint": "b15ae0fd.c3766",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "l",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "Escritura de cliente",
+        "x": 510,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b0b6980474606341",
+        "type": "function",
+        "z": "b6f5fe4d2d7edfd0",
+        "name": "Grados C",
+        "func": "var temp = msg.payload;\nvar result = (temp/1024)*5000;\n\nresult = result/10;\nvar result1 = {payload:result};\nreturn[result1];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 320,
+        "wires": [
+            [
+                "97d4ef8d8c617539"
+            ]
+        ]
+    },
+    {
+        "id": "f4cbf418af1358be",
+        "type": "function",
+        "z": "b6f5fe4d2d7edfd0",
+        "name": "Voltaje",
+        "func": "var volt = msg.payload;\nvar result = (volt*5)/1023;\n\nvar result1 = {payload:result};\nreturn[result1];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 200,
+        "wires": [
+            [
+                "846d712f1d989b53"
+            ]
+        ]
+    },
+    {
+        "id": "c0719d01e92bf388",
+        "type": "ui_text",
+        "z": "b6f5fe4d2d7edfd0",
+        "group": "e3715be7.8ca9b8",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "name": "Pushbutton",
+        "label": "Pushbutton",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 370,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "97d4ef8d8c617539",
+        "type": "ui_gauge",
+        "z": "b6f5fe4d2d7edfd0",
+        "name": "Temperatura",
+        "group": "e3715be7.8ca9b8",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "celcios",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 510,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "846d712f1d989b53",
+        "type": "ui_gauge",
+        "z": "b6f5fe4d2d7edfd0",
+        "name": "Potenciometro",
+        "group": "e3715be7.8ca9b8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "compass",
+        "title": "Potenciometro",
+        "label": "Volts",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "5",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 480,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "0164fa8f2cb58a0a",
+        "type": "inject",
+        "z": "13b08bfeb632c52a",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=1;s=Variable1;datatype=Double",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 180,
+        "wires": [
+            [
+                "dc9017804366b82d"
+            ]
+        ]
+    },
+    {
+        "id": "dc9017804366b82d",
+        "type": "OpcUa-Client",
+        "z": "13b08bfeb632c52a",
+        "endpoint": "a6463b49.678438",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 360,
+        "y": 180,
+        "wires": [
+            [
+                "8e4c7e415a8e18aa"
+            ]
+        ]
+    },
+    {
+        "id": "8e4c7e415a8e18aa",
+        "type": "debug",
+        "z": "13b08bfeb632c52a",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 600,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "7681481b5752a377",
+        "type": "inject",
+        "z": "13b08bfeb632c52a",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=1;s=Variable1;datatype=Double",
+        "payload": "67",
+        "payloadType": "num",
+        "x": 110,
+        "y": 240,
+        "wires": [
+            [
+                "ac6feb4b631bbdd1"
+            ]
+        ]
+    },
+    {
+        "id": "2b69e570623926e0",
+        "type": "inject",
+        "z": "13b08bfeb632c52a",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=1;s=Variable1;datatype=Double",
+        "payload": "22",
+        "payloadType": "num",
+        "x": 110,
+        "y": 280,
+        "wires": [
+            [
+                "ac6feb4b631bbdd1"
+            ]
+        ]
+    },
+    {
+        "id": "ac6feb4b631bbdd1",
+        "type": "OpcUa-Client",
+        "z": "13b08bfeb632c52a",
+        "endpoint": "a6463b49.678438",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 360,
+        "y": 260,
+        "wires": [
+            [
+                "acd2516e343c56fb"
+            ]
+        ]
+    },
+    {
+        "id": "a466a00a8fac8393",
+        "type": "OPCUA-IIoT-Flex-Server",
+        "z": "13b08bfeb632c52a",
+        "port": "55380",
+        "endpoint": "",
+        "acceptExternalCommands": true,
+        "maxAllowedSessionNumber": "",
+        "maxConnectionsPerEndpoint": "",
+        "maxAllowedSubscriptionNumber": "",
+        "alternateHostname": "",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "allowAnonymous": true,
+        "individualCerts": false,
+        "isAuditing": false,
+        "serverDiscovery": true,
+        "users": [],
+        "xmlsets": [],
+        "publicCertificateFile": "",
+        "privateCertificateFile": "",
+        "registerServerMethod": 1,
+        "discoveryServerEndpointUrl": "",
+        "capabilitiesForMDNS": "",
+        "maxNodesPerRead": 1000,
+        "maxNodesPerBrowse": 2000,
+        "delayToClose": 1000,
+        "addressSpaceScript": "function constructAlarmAddressSpace(server, addressSpace, eventObjects, done) {\n    // server = the created node-opcua server\n    // addressSpace = script placeholder\n    // eventObjects = to hold event variables in memory from this script\n    \n    // internal global sandbox objects are \n    // node = node of the flex server, \n    // coreServer = core iiot server object for debug and access to nodeOPCUA,\n    // and scriptObjects to hold variables and functions\n    const LocalizedText = coreServer.core.nodeOPCUA.LocalizedText\n    const namespace = addressSpace.getOwnNamespace()\n\n    coreServer.internalDebugLog('init dynamic address space')\n    node.warn('construct new address space for OPC UA')\n    \n    // from here - see the node-opcua docs how to build address sapces\n    let tanks = namespace.addObject({\n        browseName: 'Tanks',\n        description: 'The Object representing some tanks',\n        organizedBy: addressSpace.rootFolder.objects,\n        notifierOf: addressSpace.rootFolder.objects.server\n    })\n    \n    let oilTankLevel = namespace.addVariable({\n        browseName: 'OilTankLevel',\n        displayName: [\n          new LocalizedText({text: 'Oil Tank Level', locale: 'en-US'}),\n          new LocalizedText({text: 'Öl Tank Füllstand', locale: 'de-DE'})\n        ],\n        description: 'Fill level in percentage (0% to 100%) of the oil tank',\n        propertyOf: tanks,\n        dataType: 'Double',\n        eventSourceOf: tanks\n    })\n    \n    // ---------------------------------------------------------------------------------\n    // Let's create a exclusive Limit Alarm that automatically raise itself\n    // when the tank level is out of limit\n    // ---------------------------------------------------------------------------------\n    let exclusiveLimitAlarmType = addressSpace.findEventType('ExclusiveLimitAlarmType')\n    node.bianco.iiot.assert(exclusiveLimitAlarmType !== null)\n    \n    let oilTankLevelCondition = namespace.instantiateExclusiveLimitAlarm(exclusiveLimitAlarmType, {\n        componentOf: tanks,\n        conditionSource: oilTankLevel,\n        browseName: 'OilTankLevelCondition',\n        displayName: [\n          new LocalizedText({text: 'Oil Tank Level Condition', locale: 'en-US'}),\n          new LocalizedText({text: 'Öl Tank Füllstand Bedingung', locale: 'de-DE'})\n        ],\n        description: 'ExclusiveLimitAlarmType Condition',\n        conditionName: 'OilLevelCondition',\n        optionals: [\n          'ConfirmedState', 'Confirm' // confirm state and confirm Method\n        ],\n        inputNode: oilTankLevel,   // the letiable that will be monitored for change\n        highHighLimit: 0.9,\n        highLimit: 0.8,\n        lowLimit: 0.2\n    })\n    \n    // --------------------------------------------------------------\n    // Let's create a second letiable with no Exclusive alarm\n    // --------------------------------------------------------------\n    let gasTankLevel = namespace.addVariable({\n        browseName: 'GasTankLevel',\n        displayName: [\n          new LocalizedText({text: 'Gas Tank Level', locale: 'en-US'}),\n          new LocalizedText({text: 'Gas Tank Füllstand', locale: 'de-DE'})\n        ],\n        description: 'Fill level in percentage (0% to 100%) of the gas tank',\n        propertyOf: tanks,\n        dataType: 'Double',\n        eventSourceOf: tanks\n    })\n    \n    let nonExclusiveLimitAlarmType = addressSpace.findEventType('NonExclusiveLimitAlarmType')\n    node.bianco.iiot.assert(nonExclusiveLimitAlarmType !== null)\n    \n    let gasTankLevelCondition = namespace.instantiateNonExclusiveLimitAlarm(nonExclusiveLimitAlarmType, {\n        componentOf: tanks,\n        conditionSource: gasTankLevel,\n        browseName: 'GasTankLevelCondition',\n        displayName: [\n          new LocalizedText({text: 'Gas Tank Level Condition', locale: 'en-US'}),\n          new LocalizedText({text: 'Gas Tank Füllstand Bedingung', locale: 'de-DE'})\n        ],\n        description: 'NonExclusiveLimitAlarmType Condition',\n        conditionName: 'GasLevelCondition',\n        optionals: [\n          'ConfirmedState', 'Confirm' // confirm state and confirm Method\n        ],\n        inputNode: gasTankLevel,   // the letiable that will be monitored for change\n        highHighLimit: 0.9,\n        highLimit: 0.8,\n        lowLimit: 0.2\n    })\n    \n    \n    // Initial conditions for Node-RED variables with value---------------------------------------------\n    \n    if(scriptObjects.Variable1 === undefined || scriptObjects.Variable1 === null) {\n            scriptObjects.Variable1 = 0.0\n    }\n    \n        if(scriptObjects.Variable2 === undefined || scriptObjects.Variable2 === null) {\n            scriptObjects.Variable2 = 0.0\n    }\n    \n            if(scriptObjects.Variable3 === undefined || scriptObjects.Variable3 === null) {\n            scriptObjects.Variable3 = false\n    }\n    \n\t    \n    // Initial conditions for Delta PLC variables with value---------------------------------------------\n    \n    if(scriptObjects.D0 === undefined || scriptObjects.D0 === null) {\n            scriptObjects.D0 = 0\n\t}\n\tif(scriptObjects.D1 === undefined || scriptObjects.D1 === null) {\n            scriptObjects.D1 = 0\n\t\t}\n\t\t\n\tif(scriptObjects.M0 === undefined || scriptObjects.M0 === null) {\n            scriptObjects.M0 = false\n\t\t}\n\t\t\n\tif(scriptObjects.Y0 === undefined || scriptObjects.Y0 === null) {\n            scriptObjects.Y0 = false\n\t\t}\n\t\n\t\n\t    // Initial conditions for Arduino variables with value---------------------------------------------\n    \n    if(scriptObjects.A0 === undefined || scriptObjects.A0 === null) {\n            scriptObjects.A0 = 0.0\n\t}\n\tif(scriptObjects.A1 === undefined || scriptObjects.A1 === null) {\n            scriptObjects.A1 = 0.0\n\t\t}\n\t\t\n\tif(scriptObjects.Pin2 === undefined || scriptObjects.Pin2 === null) {\n            scriptObjects.Pin2 = false\n\t\t}\n\t\t\n\tif(scriptObjects.Pin3 === undefined || scriptObjects.Pin3 === null) {\n            scriptObjects.Pin3 = 0\n\t\t}\n\t\n\t\n\t\n    //Creating objects in the OPC UA server------------------------------------------------\n    \n    let myVariable1 = namespace.addObject({\n        browseName: 'Node-RED variables',\n        description: 'The Object representing some variables',\n        organizedBy: addressSpace.rootFolder.objects,\n        notifierOf: addressSpace.rootFolder.objects.server\n    })\n    \n\t  let myVariable2 = namespace.addObject({\n        browseName: 'Delta PLC variables',\n        description: 'The Object representing some variables',\n        organizedBy: addressSpace.rootFolder.objects,\n        notifierOf: addressSpace.rootFolder.objects.server\n    })\n    \n\tlet myVariable3 = namespace.addObject({\n        browseName: 'Arduino variables',\n        description: 'The Object representing some variables',\n        organizedBy: addressSpace.rootFolder.objects,\n        notifierOf: addressSpace.rootFolder.objects.server\n    })\n    \n    \n    \n    // Defining tab properties for Node-RED variables-----------------------------\n    \n    if(coreServer.core) \n    {\n        \n        namespace.addVariable({\n            componentOf: myVariable1,\n            nodeId: 'ns=1;s=Node-RED.Variable1',\n            browseName: 'Node-RED.Variable1',\n            displayName: [\n                new LocalizedText({text: 'Node-RED.Variable1', locale: 'en-US'}),\n                new LocalizedText({text: 'Node-RED.Variable1', locale: 'de-DE'})\n            ],\n            dataType: 'Double',\n            value: {\n                get: function () {\n                    return new coreServer.core.nodeOPCUA.Variant({\n                        dataType: 'Double',\n                        value: scriptObjects.Variable1\n                    })\n                },\n                set: function (variant) {\n                    scriptObjects.Variable1 = parseFloat(variant.value)\n                    return coreServer.core.nodeOPCUA.StatusCodes.Good\n                }\n            }\n            \n        })\n        \n        namespace.addVariable({\n            componentOf: myVariable1,\n            nodeId: 'ns=1;s=Node-RED.Variable2',\n            browseName: 'Node-RED.Variable2',\n            displayName: [\n                new LocalizedText({text: 'Node-RED.Variable2', locale: 'en-US'}),\n                new LocalizedText({text: 'Node-RED.Variable2', locale: 'de-DE'})\n            ],\n            dataType: 'Int16',\n            value: {\n                get: function () {\n                    return new coreServer.core.nodeOPCUA.Variant({\n                        dataType: 'Int16',\n                        value: scriptObjects.Variable2\n                    })\n                },\n                set: function (variant) {\n                    scriptObjects.Variable2 = parseFloat(variant.value)\n                    return coreServer.core.nodeOPCUA.StatusCodes.Good\n                }\n            }\n            \n        })\n        \n           namespace.addVariable({\n            componentOf: myVariable1,\n            nodeId: 'ns=1;s=Node-RED.Variable3',\n            browseName: 'Node-RED.Variable3',\n            displayName: [\n                new LocalizedText({text: 'Node-RED.Variable3', locale: 'en-US'}),\n                new LocalizedText({text: 'Node-RED.Variable3', locale: 'de-DE'})\n            ],\n            dataType: 'Boolean',\n            value: {\n                get: function () {\n                    return new coreServer.core.nodeOPCUA.Variant({\n                        dataType: 'Boolean',\n                        value: scriptObjects.Variable3\n                    })\n                },\n                set: function (variant) {\n                    scriptObjects.Variable3 = variant.value\n                    return coreServer.core.nodeOPCUA.StatusCodes.Good\n                }\n            }\n            \n        })\n        \n\t\t\n\t\t// Delta PLC variables\n\t\t\n\t\t      namespace.addVariable({\n            componentOf: myVariable2,\n            nodeId: 'ns=1;s=Delta.D0',\n            browseName: 'Delta.D0',\n            displayName: [\n                new LocalizedText({text: 'Delta.D0', locale: 'en-US'}),\n                new LocalizedText({text: 'Delta.D0', locale: 'de-DE'})\n            ],\n            dataType: 'Int16',\n            value: {\n                get: function () {\n                    return new coreServer.core.nodeOPCUA.Variant({\n                        dataType: 'Int16',\n                        value: scriptObjects.D0\n                    })\n                },\n                set: function (variant) {\n                    scriptObjects.D0 = variant.value\n                    return coreServer.core.nodeOPCUA.StatusCodes.Good\n                }\n            }\n            \n        })\n\t\t\n\n\t\t\n\t\t      namespace.addVariable({\n            componentOf: myVariable2,\n            nodeId: 'ns=1;s=Delta.D1',\n            browseName: 'Delta.D1',\n            displayName: [\n                new LocalizedText({text: 'Delta.D1', locale: 'en-US'}),\n                new LocalizedText({text: 'Delta.D1', locale: 'de-DE'})\n            ],\n            dataType: 'Int16',\n            value: {\n                get: function () {\n                    return new coreServer.core.nodeOPCUA.Variant({\n                        dataType: 'Int16',\n                        value: scriptObjects.D1\n                    })\n                },\n                set: function (variant) {\n                    scriptObjects.D1 = variant.value\n                    return coreServer.core.nodeOPCUA.StatusCodes.Good\n                }\n            }\n            \n        })\n        \n        \n        \t      namespace.addVariable({\n            componentOf: myVariable2,\n            nodeId: 'ns=1;s=Delta.M0',\n            browseName: 'Delta.M0',\n            displayName: [\n                new LocalizedText({text: 'Delta.M0', locale: 'en-US'}),\n                new LocalizedText({text: 'Delta.M0', locale: 'de-DE'})\n            ],\n            dataType: 'Boolean',\n            value: {\n                get: function () {\n                    return new coreServer.core.nodeOPCUA.Variant({\n                        dataType: 'Boolean',\n                        value: scriptObjects.M0\n                    })\n                },\n                set: function (variant) {\n                    scriptObjects.M0 = variant.value\n                    return coreServer.core.nodeOPCUA.StatusCodes.Good\n                }\n            }\n            \n        })\n\t\t\n\t\t     \t      namespace.addVariable({\n            componentOf: myVariable2,\n            nodeId: 'ns=1;s=Delta.Y0',\n            browseName: 'Delta.Y0',\n            displayName: [\n                new LocalizedText({text: 'Delta.Y0', locale: 'en-US'}),\n                new LocalizedText({text: 'Delta.Y0', locale: 'de-DE'})\n            ],\n            dataType: 'Boolean',\n            value: {\n                get: function () {\n                    return new coreServer.core.nodeOPCUA.Variant({\n                        dataType: 'Boolean',\n                        value: scriptObjects.Y0\n                    })\n                },\n                set: function (variant) {\n                    scriptObjects.Y0 = variant.value\n                    return coreServer.core.nodeOPCUA.StatusCodes.Good\n                }\n            }\n            \n        })\n\t\t\n\t\t\n\t\t//Arduino variables definitions\n\t\t\n\t\tnamespace.addVariable({\n            componentOf: myVariable3,\n            nodeId: 'ns=1;s=Arduino.A0',\n            browseName: 'Arduino.A0',\n            displayName: [\n                new LocalizedText({text: 'Arduino.A0', locale: 'en-US'}),\n                new LocalizedText({text: 'Arduino.A0', locale: 'de-DE'})\n            ],\n            dataType: 'Float',\n            value: {\n                get: function () {\n                    return new coreServer.core.nodeOPCUA.Variant({\n                        dataType: 'Float',\n                        value: scriptObjects.A0\n                    })\n                },\n                set: function (variant) {\n                    scriptObjects.A0 = parseFloat(variant.value)\n                    return coreServer.core.nodeOPCUA.StatusCodes.Good\n                }\n            }\n            \n        })\n\t\t\n\t\t\tnamespace.addVariable({\n            componentOf: myVariable3,\n            nodeId: 'ns=1;s=Arduino.A1',\n            browseName: 'Arduino.A1',\n            displayName: [\n                new LocalizedText({text: 'Arduino.A1', locale: 'en-US'}),\n                new LocalizedText({text: 'Arduino.A1', locale: 'de-DE'})\n            ],\n            dataType: 'Float',\n            value: {\n                get: function () {\n                    return new coreServer.core.nodeOPCUA.Variant({\n                        dataType: 'Float',\n                        value: scriptObjects.A1\n                    })\n                },\n                set: function (variant) {\n                    scriptObjects.A1 = parseFloat(variant.value)\n                    return coreServer.core.nodeOPCUA.StatusCodes.Good\n                }\n            }\n            \n        })\n\t\t\n\t\t\n\t\tnamespace.addVariable({\n            componentOf: myVariable3,\n            nodeId: 'ns=1;s=Arduino.Pin2',\n            browseName: 'Arduino.Pin2',\n            displayName: [\n                new LocalizedText({text: 'Arduino.Pin2', locale: 'en-US'}),\n                new LocalizedText({text: 'Arduino.Pin2', locale: 'de-DE'})\n            ],\n            dataType: 'Boolean',\n            value: {\n                get: function () {\n                    return new coreServer.core.nodeOPCUA.Variant({\n                        dataType: 'Boolean',\n                        value: scriptObjects.Pin2\n                    })\n                },\n                set: function (variant) {\n                    scriptObjects.Pin2 = variant.value\n                    return coreServer.core.nodeOPCUA.StatusCodes.Good\n                }\n            }\n            \n        })\n\t\t\n\t\tnamespace.addVariable({\n            componentOf: myVariable3,\n            nodeId: 'ns=1;s=Arduino.Pin3',\n            browseName: 'Arduino.Pin3',\n            displayName: [\n                new LocalizedText({text: 'Arduino.Pin3', locale: 'en-US'}),\n                new LocalizedText({text: 'Arduino.Pin3', locale: 'de-DE'})\n            ],\n            dataType: 'Int16',\n            value: {\n                get: function () {\n                    return new coreServer.core.nodeOPCUA.Variant({\n                        dataType: 'Int16',\n                        value: scriptObjects.Pin3\n                    })\n                },\n                set: function (variant) {\n                    scriptObjects.Pin3 = variant.value\n                    return coreServer.core.nodeOPCUA.StatusCodes.Good\n                }\n            }\n            \n        })\n\t\t\n\t\t\n\t\t\n\t\t\n        \n        \n        let memoryVariable = namespace.addVariable({\n            componentOf: myVariable1,\n            nodeId: 'ns=1;s=free_memory',\n            browseName: 'FreeMemory',\n            displayName: [\n                new LocalizedText({text: 'Free Memory', locale: 'en-US'}),\n                new LocalizedText({text: 'ungenutzer RAM', locale: 'de-DE'})\n            ],\n            dataType: 'Double',\n            \n            value: {\n              get: function () {\n                return new coreServer.core.nodeOPCUA.Variant({\n                  dataType: 'Double',\n                  value: coreServer.core.availableMemory()\n                })\n              }\n            }\n        })\n        addressSpace.installHistoricalDataNode(memoryVariable)\n       \n    } else {\n        coreServer.internalDebugLog('coreServer.core needed for coreServer.core.nodeOPCUA')\n    }\n\n    // hold event objects in memory \n    eventObjects.oilTankLevel = oilTankLevel\n    eventObjects.oilTankLevelCondition = oilTankLevelCondition\n    \n    eventObjects.gasTankLevel = gasTankLevel\n    eventObjects.gasTankLevelCondition = gasTankLevelCondition\n    \n    done()\n}",
+        "x": 90,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c52d56d247613f91",
+        "type": "modbus-read",
+        "z": "13b08bfeb632c52a",
+        "name": "",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "4096",
+        "quantity": "1",
+        "rate": "1",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "7e10f4e5.f87c2c",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 130,
+        "y": 500,
+        "wires": [
+            [
+                "2c36dc3b9085c99d",
+                "ee02d026108b56c6"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "410f761d248a748f",
+        "type": "comment",
+        "z": "13b08bfeb632c52a",
+        "name": "Variables de Node-Red",
+        "info": "",
+        "x": 120,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "bba075a023c8a701",
+        "type": "comment",
+        "z": "13b08bfeb632c52a",
+        "name": "Variables de PLC Delta",
+        "info": "",
+        "x": 120,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "2c36dc3b9085c99d",
+        "type": "debug",
+        "z": "13b08bfeb632c52a",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 350,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "ee02d026108b56c6",
+        "type": "function",
+        "z": "13b08bfeb632c52a",
+        "name": "To Client D0",
+        "func": "msg.topic=\"ns=1;s=Delta.D0;datatype=Int16\";\nmsg.payload=msg.payload[0];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 350,
+        "y": 540,
+        "wires": [
+            [
+                "43fe9c1d1c588419"
+            ]
+        ]
+    },
+    {
+        "id": "43fe9c1d1c588419",
+        "type": "OpcUa-Client",
+        "z": "13b08bfeb632c52a",
+        "endpoint": "a6463b49.678438",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 600,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9706e56f41ca8a2c",
+        "type": "modbus-write",
+        "z": "13b08bfeb632c52a",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "4097",
+        "quantity": "1",
+        "server": "7e10f4e5.f87c2c",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "x": 740,
+        "y": 900,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "2f5e33e76b7a87a4",
+        "type": "inject",
+        "z": "13b08bfeb632c52a",
+        "name": "D1",
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=1;s=Delta.D1;datatype=Int16",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 800,
+        "wires": [
+            [
+                "a4963a998d892f14"
+            ]
+        ]
+    },
+    {
+        "id": "a4963a998d892f14",
+        "type": "OpcUa-Client",
+        "z": "13b08bfeb632c52a",
+        "endpoint": "a6463b49.678438",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "",
+        "x": 300,
+        "y": 800,
+        "wires": [
+            [
+                "aca403a9b60318d1",
+                "f43fd02fd06aaeb3",
+                "b685bb6ee913ab14",
+                "ba9221adb0e63cd9"
+            ]
+        ]
+    },
+    {
+        "id": "96dcf713086436d4",
+        "type": "debug",
+        "z": "13b08bfeb632c52a",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 730,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "ef0eb2f74774be4d",
+        "type": "comment",
+        "z": "13b08bfeb632c52a",
+        "name": "De PLC a servidor OPC UA",
+        "info": "",
+        "x": 140,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "0e265d1becb4b587",
+        "type": "comment",
+        "z": "13b08bfeb632c52a",
+        "name": "De servidor OPC UA a PLC",
+        "info": "",
+        "x": 140,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "0187d71212139402",
+        "type": "inject",
+        "z": "13b08bfeb632c52a",
+        "name": "M0",
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=1;s=Delta.M0;datatype=Boolean",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 840,
+        "wires": [
+            [
+                "a4963a998d892f14"
+            ]
+        ]
+    },
+    {
+        "id": "aca403a9b60318d1",
+        "type": "function",
+        "z": "13b08bfeb632c52a",
+        "name": "M0",
+        "func": "if (msg.topic == \"ns=1;s=Delta.M0\")\n{\nreturn msg;}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 530,
+        "y": 800,
+        "wires": [
+            [
+                "96dcf713086436d4",
+                "d26c49f8ef6e315e"
+            ]
+        ]
+    },
+    {
+        "id": "f43fd02fd06aaeb3",
+        "type": "function",
+        "z": "13b08bfeb632c52a",
+        "name": "D1",
+        "func": "if (msg.topic == \"ns=1;s=Delta.D1\")\n{\nreturn msg;}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 530,
+        "y": 840,
+        "wires": [
+            [
+                "e0075ec0e1a7e53d",
+                "9706e56f41ca8a2c"
+            ]
+        ]
+    },
+    {
+        "id": "e0075ec0e1a7e53d",
+        "type": "debug",
+        "z": "13b08bfeb632c52a",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 730,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "d26c49f8ef6e315e",
+        "type": "modbus-write",
+        "z": "13b08bfeb632c52a",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "unitid": "1",
+        "dataType": "Coil",
+        "adr": "2048",
+        "quantity": "1",
+        "server": "7e10f4e5.f87c2c",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "x": 740,
+        "y": 740,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "47c25ce247f07719",
+        "type": "modbus-read",
+        "z": "13b08bfeb632c52a",
+        "name": "",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "unitid": "1",
+        "dataType": "Coil",
+        "adr": "1280",
+        "quantity": "1",
+        "rate": "1",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "7e10f4e5.f87c2c",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 130,
+        "y": 580,
+        "wires": [
+            [
+                "f4088929a9d8fec2",
+                "59a31ac1496b00d4"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "59a31ac1496b00d4",
+        "type": "function",
+        "z": "13b08bfeb632c52a",
+        "name": "To Client Y0",
+        "func": "msg.topic=\"ns=1;s=Delta.Y0;datatype=Boolean\";\nmsg.payload=msg.payload[0];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 350,
+        "y": 620,
+        "wires": [
+            [
+                "43fe9c1d1c588419"
+            ]
+        ]
+    },
+    {
+        "id": "f4088929a9d8fec2",
+        "type": "debug",
+        "z": "13b08bfeb632c52a",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 330,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "acd2516e343c56fb",
+        "type": "debug",
+        "z": "13b08bfeb632c52a",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 590,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "b5c89d6f1d0e78e5",
+        "type": "arduino in",
+        "z": "13b08bfeb632c52a",
+        "name": "",
+        "pin": "0",
+        "state": "ANALOG",
+        "arduino": "9255cd05.df42a",
+        "x": 90,
+        "y": 1280,
+        "wires": [
+            [
+                "3f44a72fa31f9b2d"
+            ]
+        ]
+    },
+    {
+        "id": "ec8e13985256da5e",
+        "type": "debug",
+        "z": "13b08bfeb632c52a",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 490,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "8287c71f0dcc8b8a",
+        "type": "comment",
+        "z": "13b08bfeb632c52a",
+        "name": "Arduino Uno",
+        "info": "",
+        "x": 90,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "82d4f37fc53f2a7d",
+        "type": "comment",
+        "z": "13b08bfeb632c52a",
+        "name": "Analog Pin 0",
+        "info": "",
+        "x": 90,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "8989b283a50fd357",
+        "type": "arduino in",
+        "z": "13b08bfeb632c52a",
+        "name": "",
+        "pin": "1",
+        "state": "ANALOG",
+        "arduino": "9255cd05.df42a",
+        "x": 90,
+        "y": 1420,
+        "wires": [
+            [
+                "b03d2e5acae00f61"
+            ]
+        ]
+    },
+    {
+        "id": "139747adabf48a53",
+        "type": "debug",
+        "z": "13b08bfeb632c52a",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 490,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "b03d2e5acae00f61",
+        "type": "function",
+        "z": "13b08bfeb632c52a",
+        "name": "To Centigrade",
+        "func": "msg.payload = (msg.payload * 500)/1024\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 280,
+        "y": 1420,
+        "wires": [
+            [
+                "139747adabf48a53",
+                "069c20414ed06d99",
+                "754e40fb1110d153"
+            ]
+        ]
+    },
+    {
+        "id": "bbea022afafcb023",
+        "type": "ui_gauge",
+        "z": "13b08bfeb632c52a",
+        "name": "",
+        "group": "5e74200e.55d4e",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Arduino A0- POT",
+        "label": "Voltage",
+        "format": "{{value|number:2}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 530,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "3f44a72fa31f9b2d",
+        "type": "range",
+        "z": "13b08bfeb632c52a",
+        "minin": "0",
+        "maxin": "1024",
+        "minout": "0",
+        "maxout": "10.0",
+        "action": "scale",
+        "round": false,
+        "property": "payload",
+        "name": "",
+        "x": 300,
+        "y": 1280,
+        "wires": [
+            [
+                "bbea022afafcb023",
+                "ec8e13985256da5e",
+                "19924a48f550ef07"
+            ]
+        ]
+    },
+    {
+        "id": "069c20414ed06d99",
+        "type": "ui_gauge",
+        "z": "13b08bfeb632c52a",
+        "name": "",
+        "group": "5e74200e.55d4e",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Room Temperature",
+        "label": "Celcius",
+        "format": "{{value|number:2}}",
+        "min": 0,
+        "max": "30",
+        "colors": [
+            "#33b0e6",
+            "#f0b775",
+            "#da6b10"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 530,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "d4e4ba7f23a28cce",
+        "type": "comment",
+        "z": "13b08bfeb632c52a",
+        "name": "Analog Pin 1",
+        "info": "",
+        "x": 90,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "009b0f3c34eccc87",
+        "type": "arduino out",
+        "z": "13b08bfeb632c52a",
+        "name": "",
+        "pin": "2",
+        "state": "OUTPUT",
+        "arduino": "9255cd05.df42a",
+        "x": 750,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "81e2f36e4736919e",
+        "type": "comment",
+        "z": "13b08bfeb632c52a",
+        "name": "Digital Pin 2",
+        "info": "",
+        "x": 90,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "5591d2ae4e93e16b",
+        "type": "comment",
+        "z": "13b08bfeb632c52a",
+        "name": "PWM Pin 3",
+        "info": "",
+        "x": 80,
+        "y": 1740,
+        "wires": []
+    },
+    {
+        "id": "7baba9b1d3322ab4",
+        "type": "ui_button",
+        "z": "13b08bfeb632c52a",
+        "name": "Encender",
+        "group": "5e74200e.55d4e",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Encender",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "Green",
+        "className": "",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "num",
+        "topic": "",
+        "topicType": "str",
+        "x": 100,
+        "y": 1640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3941606afccbf3ef",
+        "type": "ui_button",
+        "z": "13b08bfeb632c52a",
+        "name": "Apagar",
+        "group": "5e74200e.55d4e",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Apagar",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "red",
+        "className": "",
+        "icon": "",
+        "payload": "0",
+        "payloadType": "num",
+        "topic": "",
+        "topicType": "str",
+        "x": 100,
+        "y": 1680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fc50f037fc320d55",
+        "type": "ui_slider",
+        "z": "13b08bfeb632c52a",
+        "name": "Intensidad de LED",
+        "label": "Intensidad de LED",
+        "tooltip": "",
+        "group": "5e74200e.55d4e",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "",
+        "topicType": "str",
+        "min": "0",
+        "max": "255",
+        "step": 1,
+        "className": "",
+        "x": 130,
+        "y": 1780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ea5d27440a47feae",
+        "type": "arduino out",
+        "z": "13b08bfeb632c52a",
+        "name": "",
+        "pin": "3",
+        "state": "PWM",
+        "arduino": "9255cd05.df42a",
+        "x": 790,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "f893e9302d4e44e0",
+        "type": "comment",
+        "z": "13b08bfeb632c52a",
+        "name": "De Arduino a servidor OPC UA",
+        "info": "",
+        "x": 150,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "5d22961ab5d5bb14",
+        "type": "comment",
+        "z": "13b08bfeb632c52a",
+        "name": "De servidor OPC UA a Arduino",
+        "info": "",
+        "x": 150,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "19924a48f550ef07",
+        "type": "function",
+        "z": "13b08bfeb632c52a",
+        "name": "To server",
+        "func": "msg.topic = \"ns=1;s=Arduino.A0;datatype=Float\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 500,
+        "y": 1360,
+        "wires": [
+            [
+                "7bc97a84ddeb514d"
+            ]
+        ]
+    },
+    {
+        "id": "7bc97a84ddeb514d",
+        "type": "link out",
+        "z": "13b08bfeb632c52a",
+        "name": "ArduinoA0",
+        "links": [
+            "75591b62d845ac4f"
+        ],
+        "x": 655,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "75591b62d845ac4f",
+        "type": "link in",
+        "z": "13b08bfeb632c52a",
+        "name": "",
+        "links": [
+            "7bc97a84ddeb514d",
+            "968f8b1b753e1c92"
+        ],
+        "x": 395,
+        "y": 660,
+        "wires": [
+            [
+                "43fe9c1d1c588419",
+                "5fe1cdfbe255d391"
+            ]
+        ]
+    },
+    {
+        "id": "5fe1cdfbe255d391",
+        "type": "debug",
+        "z": "13b08bfeb632c52a",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 570,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "754e40fb1110d153",
+        "type": "function",
+        "z": "13b08bfeb632c52a",
+        "name": "To server",
+        "func": "msg.topic = \"ns=1;s=Arduino.A1;datatype=Float\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 500,
+        "y": 1500,
+        "wires": [
+            [
+                "968f8b1b753e1c92"
+            ]
+        ]
+    },
+    {
+        "id": "968f8b1b753e1c92",
+        "type": "link out",
+        "z": "13b08bfeb632c52a",
+        "name": "ArduinoA1",
+        "links": [
+            "75591b62d845ac4f"
+        ],
+        "x": 655,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "568da0a441563c06",
+        "type": "inject",
+        "z": "13b08bfeb632c52a",
+        "name": "Arduino Pin2",
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=1;s=Arduino.Pin2;datatype=Boolean",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 880,
+        "wires": [
+            [
+                "a4963a998d892f14"
+            ]
+        ]
+    },
+    {
+        "id": "b685bb6ee913ab14",
+        "type": "function",
+        "z": "13b08bfeb632c52a",
+        "name": "Arduino PIn 2",
+        "func": "if (msg.topic == \"ns=1;s=Arduino.Pin2\")\n{\n    if (msg.payload === true)\n   { msg.payload = 1;\n    return msg;}\n     if (msg.payload === false)\n   { msg.payload = 0;\n    return msg;}\n    \n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 560,
+        "y": 980,
+        "wires": [
+            [
+                "259966950884446e",
+                "009b0f3c34eccc87"
+            ]
+        ]
+    },
+    {
+        "id": "259966950884446e",
+        "type": "debug",
+        "z": "13b08bfeb632c52a",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 770,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "a328a71b547ba55c",
+        "type": "inject",
+        "z": "13b08bfeb632c52a",
+        "name": "Arduino Pin3",
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=1;s=Arduino.Pin3;datatype=Int16",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 920,
+        "wires": [
+            [
+                "a4963a998d892f14"
+            ]
+        ]
+    },
+    {
+        "id": "ba9221adb0e63cd9",
+        "type": "function",
+        "z": "13b08bfeb632c52a",
+        "name": "Arduino PIn 2 (0:255)",
+        "func": "if (msg.topic == \"ns=1;s=Arduino.Pin3\")\n{\n    return msg;\n    \n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 580,
+        "y": 1100,
+        "wires": [
+            [
+                "ea5d27440a47feae",
+                "c24d578e08b1b9b7"
+            ]
+        ]
+    },
+    {
+        "id": "c24d578e08b1b9b7",
+        "type": "debug",
+        "z": "13b08bfeb632c52a",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 810,
+        "y": 1160,
+        "wires": []
+    }
+]
